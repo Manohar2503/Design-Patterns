@@ -63,8 +63,6 @@ class MobileDevice implements Observer{
     }
 }
 
-
-
 public class ObserverPatternExample {
     public static void main(String[] args){
         Observer device = new DisplayDevice("samsung");

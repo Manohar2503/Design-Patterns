@@ -6,7 +6,7 @@ public class ParkingLot {
     private List<Floor> floors;
     private String parkingLotName;
     private ParkingStrategy parkingStrategy;
-    private static ParkingLot instance;
+    private static volatile ParkingLot instance;
 
 
     private ParkingLot(String name, List<Floor> floors, ParkingStrategy parkingStrategy){
@@ -17,7 +17,11 @@ public class ParkingLot {
 
     public static ParkingLot getInstance(String parkingLotName, List<Floor> floors, ParkingStrategy strategy) {
         if (instance == null) {
-            instance = new ParkingLot(parkingLotName, floors, strategy);
+           synchronized (ParkingLot.class){
+               if(instance==null){
+                   instance = new ParkingLot(parkingLotName, floors, strategy);
+               }
+           }
         }
         return instance;
     }

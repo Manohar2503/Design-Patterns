@@ -5,7 +5,7 @@ public class Client {
         WithoutStatePattern withoutStatePattern = new WithoutStatePattern(TransportationMode.TRAIN);
         withoutStatePattern.setMode(TransportationMode.WALKING);
         withoutStatePattern.getETA();
-        System.out.println(withoutStatePattern.getDirections());
+        withoutStatePattern.getDirections();
     }
 
 }

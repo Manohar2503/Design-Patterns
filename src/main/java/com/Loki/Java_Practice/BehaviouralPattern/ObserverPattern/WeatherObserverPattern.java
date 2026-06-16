@@ -16,12 +16,10 @@ class WeatherStation{
 
     public void setTemparature(float temp){
         this.temparature = temp;
-        display();
+        design.display(this.temparature);
     }
 
-    public void display() {
-        design.display(temparature);
-    }
+
 }
 
 public class WeatherObserverPattern {

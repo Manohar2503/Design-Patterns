@@ -8,7 +8,4 @@ public class Client {
         System.out.println(service.getdirections());
 
     }
-
-
-
 }

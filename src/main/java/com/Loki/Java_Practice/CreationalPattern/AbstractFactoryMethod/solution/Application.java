@@ -88,7 +88,7 @@ public class Application {
 
     public static void main(String[] args){
             WindowsFactory windowsFactory = new WindowsFactory();
-            Application app = new Application(new MacOsFactory());
+            Application app = new Application(windowsFactory);
             app.rendering();
     }
 }

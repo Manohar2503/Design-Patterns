@@ -8,7 +8,7 @@ public class House {
     private boolean hasSwimmingpoll;
     private boolean hasGarden;
 
-    House(HouseBuilder builder){
+    private House(HouseBuilder builder){
         this.foundation = builder.foundation;
         this.structure = builder.structure;
         this.roof = builder.roof;

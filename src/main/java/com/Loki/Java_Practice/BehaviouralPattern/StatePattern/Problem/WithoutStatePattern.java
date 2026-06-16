@@ -35,19 +35,24 @@ public class WithoutStatePattern {
         }
     }
 
-    public String getDirections() {
+    public void getDirections() {
 
         switch(mode){
             case WALKING:
                 System.out.println(" Walking Direction");
+                break;
             case CYCLING:
                 System.out.println(" CYCLING Direction");
+                break;
             case CAR:
                 System.out.println(" CAR Direction");
+                break;
             case TRAIN:
                 System.out.println(" TRAIN Direction");
+                break;
             default:
-                return "Unknown Mode";        }
+                throw new IllegalArgumentException("Unknown Mode");
+        }
     }
 
 }
